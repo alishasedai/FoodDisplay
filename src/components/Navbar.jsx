@@ -36,7 +36,7 @@ const[open,setOpen] = useState(false);
 >
 
     <MdClose className='md:hidden absolute top-0 bg-green-900 rounded-full right-0 text-white p-1' onClick={() => setOpen(prev => !prev)} size={30}/>
-        <li onClick={() => setMenu("home")} className={`cursor-pointer text-3xl ${menu === "home" ? "border-b-2 border-gray-600 text-red-800" : ""}`}>Home</li>
+        <li onClick={() => setMenu("home")} className={`cursor-pointer  ${menu === "home" ? "border-b-2 border-gray-600 text-red-800" : ""}`}>Home</li>
         <li onClick={() => setMenu("menu")} className={`cursor-pointer  ${menu === "menu" ? "border-b-2 border-gray-600 text-red-800" : ""}`} >Menu</li>
         <li onClick={() => setMenu("mobile-app")} className={`cursor-pointer  ${menu === "mobile-app" ? "border-b-2 border-gray-600 text-red-800" : ""}`}>Mobile-app</li>
         <li onClick={() => setMenu("contact")} className={`cursor-pointer   ${menu === "contact" ? "border-b-2 border-gray-600 text-red-800" : ""}`}>Contact us</li>

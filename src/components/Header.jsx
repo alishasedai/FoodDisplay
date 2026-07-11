@@ -4,7 +4,7 @@ import { assets } from '../assets/assests'
 const Header = () => {
   return (
     <div
-      className="h-[45vh] w-full flex items-start justify-center"
+      className="h-[45vh] md:h-[64vh] w-full flex items-start justify-center"
     //   style={{ backgroundImage: `url(${assets.bg})` }}
     >
       <div style={{ backgroundImage: `url(${assets.bg})` }} className="text-white h-[40vh] md:h-[60vh] md:w-full bg-black/50 p-6 rounded-xl bg-cover  ">
