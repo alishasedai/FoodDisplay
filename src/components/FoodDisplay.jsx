@@ -7,7 +7,7 @@ const FoodDisplay = ({category}) => {
     console.log(category)
   return (
     <div className=''>
-      <h2 className='text-3xl  font-extrabold'>Top Dishes near you</h2>
+      <h2 className='text-3xl font-extrabold'>Top Dishes near you</h2>
       <div className='grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] justify-content-center gap-3'>
         {food_list.map((list,index) => {
          console.log(list.category);
