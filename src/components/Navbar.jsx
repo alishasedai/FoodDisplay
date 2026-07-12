@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { assets, icons } from '../assets/assests';
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
-const Navbar = () => {
+const Navbar = ({setShowLogIn}) => {
 const [menu,setMenu] =useState("home");
 const[open,setOpen] = useState(false);
 
@@ -46,7 +46,7 @@ const[open,setOpen] = useState(false);
 
       {/* Cart Icon */}
       <FaShoppingCart size={22} />
-      <button className='bg-transparent border border-gray-400 h-9 w-20 rounded-lg text-md md:text-xl cursor-pointer hover:bg-yellow-100'>Sign In</button>
+      <button onClick={() => {setShowLogIn(true)}} className='bg-transparent border border-gray-400 h-9 w-20 rounded-lg text-md md:text-xl cursor-pointer hover:bg-yellow-100'>Sign In</button>
       </div>
     </div>
   )
