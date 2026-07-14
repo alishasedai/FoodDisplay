@@ -34,7 +34,7 @@ import grilled_cheese_sandwich from "./grilled_Sandwhich.jpeg";
 import plus from "./plus.png";
 import remove from "./remove.png";
 import add_green from "./add_green.png";
-import closeIcon from "./CloseIcon.jpeg";
+import closeIcon from "./closeIcon.jpeg";
 
 export const assets = {
   logo,
