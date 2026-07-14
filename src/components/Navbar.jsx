@@ -4,6 +4,7 @@ import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { MdClose } from "react-icons/md";
 const Navbar = ({setShowLogIn}) => {
+
 const [menu,setMenu] =useState("home");
 const[open,setOpen] = useState(false);
 
@@ -47,7 +48,7 @@ const[open,setOpen] = useState(false);
 
       {/* Cart Icon */}
       <Link to="/cart"> <FaShoppingCart size={22} /></Link>
-      <button onClick={() => {setShowLogIn(true)}} className='bg-transparent border border-gray-400 h-9 w-20 rounded-lg text-md md:text-xl cursor-pointer hover:bg-yellow-100'>Sign In</button>
+      <button onClick={() => {setShowLogIn(true)}} className='bg-transparent border border-gray-400 h-9 w-20 rounded-lg text-md md:text-xl cursor-pointer hover:bg-yellow-100' >Sign In</button>
       </div>
     </div>
   )
