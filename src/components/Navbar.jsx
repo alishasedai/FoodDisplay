@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { assets, icons } from '../assets/assests';
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import { MdClose } from "react-icons/md";
 const Navbar = ({setShowLogIn}) => {
 const [menu,setMenu] =useState("home");
@@ -8,7 +9,7 @@ const[open,setOpen] = useState(false);
 
   return (
     <div className='flex sm:flex-row md:flex-row relative lg:flex-row w-full justify-between items-center'>
-       <img src={assets.logo} className='h-20 w-40' onClick={() => setOpen(prev => !prev)} alt="" />
+       <Link to="/"><img src={assets.logo} className='h-20 w-40' onClick={() => setOpen(prev => !prev)} alt="" /></Link>
      
   <ul
   className={`
@@ -36,7 +37,7 @@ const[open,setOpen] = useState(false);
 >
 
     <MdClose className='md:hidden absolute top-0 bg-green-900 rounded-full right-0 text-white p-1' onClick={() => setOpen(prev => !prev)} size={30}/>
-        <li onClick={() => setMenu("home")} className={`cursor-pointer  ${menu === "home" ? "border-b-2 border-gray-600 text-red-800" : ""}`}>Home</li>
+        <Link to="/" onClick={() => setMenu("home")} className={`cursor-pointer  ${menu === "home" ? "border-b-2 border-gray-600 text-red-800" : ""}`}>Home</Link>
         <li onClick={() => setMenu("menu")} className={`cursor-pointer  ${menu === "menu" ? "border-b-2 border-gray-600 text-red-800" : ""}`} >Menu</li>
         <li onClick={() => setMenu("mobile-app")} className={`cursor-pointer  ${menu === "mobile-app" ? "border-b-2 border-gray-600 text-red-800" : ""}`}>Mobile-app</li>
         <li onClick={() => setMenu("contact")} className={`cursor-pointer   ${menu === "contact" ? "border-b-2 border-gray-600 text-red-800" : ""}`}>Contact us</li>
@@ -45,7 +46,7 @@ const[open,setOpen] = useState(false);
               <FaSearch size={20} />
 
       {/* Cart Icon */}
-      <FaShoppingCart size={22} />
+      <Link to="/cart"> <FaShoppingCart size={22} /></Link>
       <button onClick={() => {setShowLogIn(true)}} className='bg-transparent border border-gray-400 h-9 w-20 rounded-lg text-md md:text-xl cursor-pointer hover:bg-yellow-100'>Sign In</button>
       </div>
     </div>
