@@ -48,7 +48,7 @@ console.log(cartItems)
                 </div>
                 <hr className='mt-[8px] mb-2 text-gray-400'/>
                 <div className='cart-totals-sub flex justify-between text-black font-extrabold'>
-                  <p>Delivery Fee</p>
+                  <p>Delivery Fees</p>
                   <p>{2}</p>
                 </div>
                 <hr className='mt-[8px]  text-gray-400' />
