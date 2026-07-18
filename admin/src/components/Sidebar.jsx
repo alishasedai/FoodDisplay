@@ -12,17 +12,17 @@ const Sidebar = () => {
     
     <NavLink to="/add" className={({isActive}) => `sidebar-option ${isActive ? "bg-red-200 border border-[#ff6347]" : " border-gray-500"} ml-2 w-full flex items-center justify-center md:justify-start gap-2 border px-2 py-2 cursor-pointer`}>
       <IoMdAdd />
-      <p className="hidden md:block">Add Items</p>
+      <p className="hidden md:block">Add Items:</p>
     </NavLink>
 
     <NavLink to="/list" className={({isActive}) => `sidebar-option ${isActive ? "bg-red-200 border border-[#ff6347]" : " border-gray-500"} ml-2 w-full flex items-center justify-center md:justify-start gap-2 border  px-2 py-2 cursor-pointer`}>
       <FaRegListAlt />
-      <p className="hidden md:block">List Items</p>
+      <p className="hidden md:block">List Items:</p>
     </NavLink>
 
     <NavLink to="/orders" className={({isActive}) => `sidebar-option ${isActive ? "bg-red-200 border border-[#ff6347]" : " border-gray-500"} ml-2 w-full flex items-center justify-center md:justify-start gap-2 border  px-2 py-2 cursor-pointer`}>
       <GoListOrdered />
-      <p className="hidden md:block">Orders</p>
+      <p className="hidden md:block">Orders:</p>
     </NavLink>
 
   </div>
