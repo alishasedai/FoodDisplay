@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { assets, icons } from '../assets/assests';
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { MdClose } from "react-icons/md";
+import { StoreContext } from '../context/StoreContext';
 const Navbar = ({setShowLogIn}) => {
 
 const [menu,setMenu] =useState("home");
 const[open,setOpen] = useState(false);
+
+const {getTotalCartAmount,token,setToken}= useContext(StoreContext);
 
   return (
     <div className='flex sm:flex-row md:flex-row relative lg:flex-row w-full justify-between items-center'>
@@ -48,7 +51,11 @@ const[open,setOpen] = useState(false);
 
       {/* Cart Icon */}
       <Link to="/cart"> <FaShoppingCart size={22} /></Link>
-      <button onClick={() => {setShowLogIn(true)}} className='bg-transparent border border-gray-400 h-9 w-20 rounded-lg text-md md:text-xl cursor-pointer hover:bg-yellow-100' >Sign In</button>
+      {!token ? <button onClick={() => {setShowLogIn(true)}} className='bg-transparent border border-gray-400 h-9 w-20 rounded-lg text-md md:text-xl cursor-pointer hover:bg-yellow-100' >Sign In</button> : 
+      <div>
+        <img src={icons.plus} alt="" />
+        </div>}
+      
       </div>
     </div>
   )
