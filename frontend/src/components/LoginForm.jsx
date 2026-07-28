@@ -19,18 +19,20 @@ const LoginForm = ({setShowLogIn}) => {
       setData(data => ({...data,[name] : value}))
     }
     const onLogin = async (event) => {
-      event.prevenTDefault(); let newUrl = url;
+      event.preventDefault();
+       let newUrl = url;
       if(currState === "Login"){
         newUrl += "/api/user/userLogin"
       }else{
         newUrl += "/api/user/register"
       }
       const response = await axios.post(newUrl,data);
+      console.log(response.data)
       if(response.data.success){
         setToken(response.data.token);
         localStorage.setItem("token",response.data.token);
         setShowLogIn(false)
-      }
+      } 
       else{
         alert(response.data.message);
       }

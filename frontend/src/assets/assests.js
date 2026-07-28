@@ -29,6 +29,9 @@ import caesar_salad from "./caesar_salad.jpeg";
 import seatle_roll from "./seatle_roll.jpeg"
 import orange_juice from "./orange.jpeg";
 import grilled_cheese_sandwich from "./grilled_Sandwhich.jpeg";
+import profile_icon from "./profile_icon.jpeg";
+import logout from "./logout.png";
+import bag_icon from "./bag_icon.png";
 
 //icons
 import plus from "./plus.png";
@@ -44,7 +47,10 @@ export const icons = {
   plus,
   remove,
   add_green,
-  closeIcon
+  closeIcon,
+  profile_icon,
+  logout,
+  bag_icon
 };
 
 export const menu_list = [
